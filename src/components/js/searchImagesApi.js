@@ -15,5 +15,5 @@ export default async function fetchImagesWithQuery(query) {
   };
 
   const response = await createApi.get("search/photos", { params });
-  return response.results;
+  return response.data.results;
 }

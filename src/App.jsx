@@ -18,7 +18,7 @@ function App() {
       setError(false);
       setLoading(true);
       const images = await fetchImagesWithQuery(query);
-      setShowGalleryImages({ images });
+      setShowGalleryImages(images);
       console.log("після запиту", { showGalleryImages });
     } catch (error) {
       setError(true);
