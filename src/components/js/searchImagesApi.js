@@ -7,11 +7,12 @@ const createApi = axios.create({
   },
 });
 
-export default async function fetchImagesWithQuery(query) {
+export default async function fetchImagesWithQuery(query, page) {
   const params = {
     query,
-    // page,
+    page,
     per_page: 12,
+    orientation: "landscape",
   };
 
   const response = await createApi.get("search/photos", { params });
